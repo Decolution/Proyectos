@@ -1,7 +1,7 @@
 package com.futurodelsaber.futuroSaber.repositories;
 /*Librerias*/
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -12,5 +12,5 @@ import com.futurodelsaber.futuroSaber.models.UserModel;
 @Repository
 public interface UserRepository extends CrudRepository<UserModel, Integer>{
     
-    public abstract Optional<UserModel> findById(Integer id);   
+       List<UserModel> findAll();
 } 

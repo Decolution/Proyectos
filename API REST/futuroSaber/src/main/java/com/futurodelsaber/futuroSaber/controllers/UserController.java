@@ -1,8 +1,9 @@
 package com.futurodelsaber.futuroSaber.controllers;
 
 
-import java.util.ArrayList;
-import java.util.Optional;
+
+import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,11 +20,12 @@ import com.futurodelsaber.futuroSaber.services.UserService;
 /*En que direccion del servidor PATH se van a activar los metodos de la clase */
 @RequestMapping("/estudiante")
 public class UserController {
+    
     @Autowired
     UserService estudianteService;
 
     @GetMapping()
-    public ArrayList<UserModel> obtenerEstudiantes(){
+    public List<UserModel> obtenerEstudiantes(){
         return estudianteService.obtenerEstudiantes();
     }
 
@@ -33,8 +35,8 @@ public class UserController {
         
     }
 
-    @GetMapping(path = "/{id}")
-    public Optional<UserModel> obtenerPorId(@PathVariable("id") Integer id){
+    @GetMapping("/{id}")
+    public UserModel obtenerPorId(@PathVariable("id") Integer id){
         return this.estudianteService.obtenerPorId(id);
     } 
 }
