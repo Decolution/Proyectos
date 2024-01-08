@@ -14,29 +14,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.futurodelsaber.futuroSaber.models.UserModel;
-import com.futurodelsaber.futuroSaber.services.UserService;
+import com.futurodelsaber.futuroSaber.services.UserServices;
 
 @RestController
 /*En que direccion del servidor PATH se van a activar los metodos de la clase */
-@RequestMapping("/estudiante")
+@RequestMapping("/usuario")
 public class UserController {
     
     @Autowired
-    UserService estudianteService;
+    UserServices usuarioService;
 
     @GetMapping()
-    public List<UserModel> obtenerEstudiantes(){
-        return estudianteService.obtenerEstudiantes();
+    public List<UserModel> obtenerUsuario(){
+        return usuarioService.obtenerUsuario();
     }
 
     @PostMapping()
-    public UserModel guardarEstudiante(@RequestBody UserModel estudiante){
-        return this.estudianteService.guardarEstudiante(estudiante);
+    public UserModel guardarUsuarios(@RequestBody UserModel usuario){
+        return this.usuarioService.guardarUsuario(usuario);
         
     }
 
     @GetMapping("/{id}")
     public UserModel obtenerPorId(@PathVariable("id") Integer id){
-        return this.estudianteService.obtenerPorId(id);
+        return this.usuarioService.obtenerPorId(id);
     } 
 }

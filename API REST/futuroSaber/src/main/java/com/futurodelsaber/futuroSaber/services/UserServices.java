@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.futurodelsaber.futuroSaber.models.UserModel;
 
-public interface UserService {
+public interface UserServices {
     
-    List<UserModel> obtenerEstudiantes();
+    List<UserModel> obtenerUsuario();
 
-    UserModel guardarEstudiante(UserModel estudiante);
+    UserModel guardarUsuario(UserModel usuario);
 
     UserModel obtenerPorId(Integer id);
 }

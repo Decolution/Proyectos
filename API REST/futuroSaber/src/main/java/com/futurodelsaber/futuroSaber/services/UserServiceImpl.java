@@ -12,17 +12,17 @@ import jakarta.transaction.Transactional;
 
 @Service
 @Transactional
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserServices{
     
     @Autowired
     UserRepository usuarioRepository;
 
-    public List<UserModel> obtenerEstudiantes() {
+    public List<UserModel> obtenerUsuario() {
         return usuarioRepository.findAll();      
     }
 
-    public UserModel guardarEstudiante(UserModel estudiante){
-        return usuarioRepository.save(estudiante);
+    public UserModel guardarUsuario(UserModel usuario){
+        return usuarioRepository.save(usuario);
     }
 
     public UserModel obtenerPorId(Integer id) {
