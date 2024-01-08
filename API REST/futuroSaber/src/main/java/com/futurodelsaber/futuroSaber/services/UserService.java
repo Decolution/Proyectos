@@ -9,7 +9,10 @@ import org.springframework.stereotype.Service;
 import com.futurodelsaber.futuroSaber.models.UserModel;
 import com.futurodelsaber.futuroSaber.repositories.UserRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
+@Transactional
 public class UserService {
     @Autowired
     UserRepository usuarioRepository;
