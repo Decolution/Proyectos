@@ -1,7 +1,6 @@
 package com.futurodelsaber.futuroSaber.repositories;
 /*Librerias*/
 
-import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
