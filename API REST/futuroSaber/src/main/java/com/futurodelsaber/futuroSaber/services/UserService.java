@@ -22,7 +22,7 @@ public class UserService {
         return usuarioRepository.save(estudiante);
     }
 
-    public Optional<UserModel> obtenerPorId(Long id) {
+    public Optional<UserModel> obtenerPorId(Integer id) {
         return usuarioRepository.findById(id);      
     }
 }

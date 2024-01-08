@@ -6,9 +6,9 @@ import jakarta.persistence.*;
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    public Long getId(){
+    public Integer getId(){
         return id;
     }
 }

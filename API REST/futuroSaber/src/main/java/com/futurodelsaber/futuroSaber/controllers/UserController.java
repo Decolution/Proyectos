@@ -33,8 +33,8 @@ public class UserController {
         
     }
 
-    @GetMapping( path = "/{id}")
-    public Optional<UserModel> obtenerPorId(@PathVariable("id") Long id){
+    @GetMapping(path = "/{id}")
+    public Optional<UserModel> obtenerPorId(@PathVariable("id") Integer id){
         return this.estudianteService.obtenerPorId(id);
     } 
 }
