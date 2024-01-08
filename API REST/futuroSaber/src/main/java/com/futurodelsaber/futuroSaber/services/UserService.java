@@ -13,14 +13,12 @@ public class UserService {
     @Autowired
     UserRepository usuarioRepository;
 
-    public ArrayList<UserModel> obtenerUsuarios() {
+    public ArrayList<UserModel> obtenerEstudiantes() {
         return (ArrayList<UserModel>)usuarioRepository.findAll();      
     }
 
-    public UserModel guardarUsuario(UserModel usuario){
-        return usuarioRepository.save(usuario);
-
-
+    public UserModel guardarEstudiante(UserModel estudiante){
+        return usuarioRepository.save(estudiante);
     }
 
 }
