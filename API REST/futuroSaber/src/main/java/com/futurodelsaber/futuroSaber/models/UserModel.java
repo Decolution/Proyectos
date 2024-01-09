@@ -1,5 +1,7 @@
 package com.futurodelsaber.futuroSaber.models;
 
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -10,7 +12,11 @@ public class UserModel {
     @Column(unique = true, nullable = false)
 
     private Integer id;
+
+    @Column(name = "user")
     private String user;
+
+    @Column(name = "password")
     private String password;
 
     public Integer getId(){
@@ -21,7 +27,7 @@ public class UserModel {
         this.user = usuario;
     }
 
-    public String usuario(){
+    public String getUser(){
         return user;
     }
 
@@ -29,7 +35,7 @@ public class UserModel {
         this.password = password;
     }
 
-    public String password(){
+    public String getPassword(){
         return password;
     }
 }
