@@ -1,6 +1,6 @@
 package com.futurodelsaber.futuroSaber.models;
 
-import java.sql.Date;
+/*import java.util.Date;*/
 
 import jakarta.persistence.*;
 
@@ -19,14 +19,14 @@ public class EstudianteModel {
         return id;
     }
 
-    @Column(name = "TiposIdentificacion_id")
-    private String tipoId;
+    @Column(name = "tiposidentificacion_id")
+    private Integer tipoId;
 
-    public void setTipoId(String tipoId) {
+    public void setTipoId(Integer tipoId) {
         this.tipoId = tipoId;
     }
 
-    public String getTipoId() {
+    public Integer getTipoId() {
         return tipoId;
     }
 
@@ -52,15 +52,15 @@ public class EstudianteModel {
         this.apellidos = apellidos;
     }
 
-    @Column(name = "fechaNacimiento")
-    private Date fechaNacimiento;
+    @Column(name = "fechanacimiento")
+    private String nacimiento;
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
+    public String getNacimiento() {
+        return nacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setNacimiento(String nacimiento) {
+        this.nacimiento = nacimiento;
     }
 
     @Column(name = "ciudad")
@@ -96,25 +96,25 @@ public class EstudianteModel {
         return email;
     }
 
-    @Column(name = "telefonoFijo")
-    private String telefonoFijo;
+    @Column(name = "telefonofijo")
+    private Integer telefonoFijo;
 
-    public void setTelefonoFijo(String telefonoFijo) {
+    public void setTelefonoFijo(Integer telefonoFijo) {
         this.telefonoFijo = telefonoFijo;
     }
 
-    public String getTelefonoFijo() {
+    public Integer getTelefonoFijo() {
         return telefonoFijo;
     }
 
     @Column(name = "celular")
-    private String celular;
+    private Integer celular;
 
-    public void setCelular(String celular) {
+    public void setCelular(Integer celular) {
         this.celular = celular;
     }
 
-    public String getCelular() {
+    public Integer getCelular() {
         return celular;
     }
 
