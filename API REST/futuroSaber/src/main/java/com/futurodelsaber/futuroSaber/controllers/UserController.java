@@ -6,12 +6,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.futurodelsaber.futuroSaber.models.UserModel;
 import com.futurodelsaber.futuroSaber.services.UserServices;
@@ -39,4 +34,14 @@ public class UserController {
     public UserModel obtenerPorId(@PathVariable("id") Integer id){
         return this.usuarioService.obtenerPorId(id);
     } 
+
+    @DeleteMapping("/{id}")
+    public String eliminarPorId(@PathVariable("id") Integer id){
+        boolean ok = this.usuarioService.eliminarUsuario(id);
+        if (ok){
+            return "Se eliminó el usuario con id " + id;
+        }else{
+            return "No pudo eliminar el usuario con id" + id;
+        }
+    }
 }

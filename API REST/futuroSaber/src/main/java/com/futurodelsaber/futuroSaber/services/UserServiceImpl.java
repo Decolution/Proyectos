@@ -28,4 +28,14 @@ public class UserServiceImpl implements UserServices{
     public UserModel obtenerPorId(Integer id) {
         return usuarioRepository.findById(id).orElse(null);      
     }
+
+    public boolean eliminarUsuario(Integer id){
+        try{
+            usuarioRepository.deleteById(id);
+        }
+        catch(Exception err){
+            return false;
+        }
+        return true;
+    }
 }

@@ -11,4 +11,6 @@ public interface UserServices {
     UserModel guardarUsuario(UserModel usuario);
 
     UserModel obtenerPorId(Integer id);
+
+    boolean eliminarUsuario(Integer id);
 }
