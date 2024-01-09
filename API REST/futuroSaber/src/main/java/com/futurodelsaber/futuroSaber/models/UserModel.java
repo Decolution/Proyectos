@@ -1,7 +1,5 @@
 package com.futurodelsaber.futuroSaber.models;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
-
 import jakarta.persistence.*;
 
 @Entity

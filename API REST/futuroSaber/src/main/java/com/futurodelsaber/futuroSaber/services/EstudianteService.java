@@ -11,4 +11,6 @@ public interface EstudianteService {
     EstudianteModel guardarEstudiante(EstudianteModel estudiante);
 
     EstudianteModel obtenerPorId(Integer id);
+
+    boolean eliminarEstudiante(Integer id);
 }

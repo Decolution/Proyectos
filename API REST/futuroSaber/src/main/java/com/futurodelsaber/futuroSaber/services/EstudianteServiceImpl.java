@@ -28,4 +28,14 @@ public class EstudianteServiceImpl implements EstudianteService{
     public EstudianteModel obtenerPorId(Integer id) {
         return estudianteRepository.findById(id).orElse(null);      
     }
+
+    public boolean eliminarEstudiante(Integer id){
+        try{
+            estudianteRepository.deleteById(id);
+        }
+        catch(Exception err){
+            return false;
+        }
+        return true;
+    }
 }
