@@ -10,7 +10,7 @@ public class UserModel {
     @Column(unique = true, nullable = false)
 
     private Integer id;
-    private String usuario;
+    private String user;
     private String password;
 
     public Integer getId(){
@@ -18,11 +18,11 @@ public class UserModel {
     }
 
     public void setUser(String usuario){
-        this.usuario = usuario;
+        this.user = usuario;
     }
 
     public String usuario(){
-        return usuario;
+        return user;
     }
 
     public void setPassword(String password){
