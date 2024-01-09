@@ -31,4 +31,14 @@ public class EstudianteController {
     public EstudianteModel obtenerPorId(@PathVariable("id") Integer id){
         return this.estudianteService.obtenerPorId(id);
     } 
+
+    @DeleteMapping("/{id}")
+    public String eliminarPorId(@PathVariable("id") Integer id){
+        boolean ok = this.estudianteService.eliminarEstudiante(id);
+        if (ok){
+            return "Se eliminó el Estudiante con id " + id;
+        }else{
+            return "No pudo eliminar el Estudiante con id" + id;
+        }
+    }
 }
