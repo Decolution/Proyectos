@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping()
-    public UserModel guardarUsuarios(@RequestBody UserModel usuario){
+    public UserModel guardarUsuario(@RequestBody UserModel usuario){
         return this.usuarioService.guardarUsuario(usuario);
         
     }
